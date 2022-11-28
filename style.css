@@ -222,7 +222,7 @@ body {
   transition: opacity 0.25s 0.25s;
 }
 .el:hover .el__index-back {
-  /* transition: opacity 0.25s; */
+  transition: opacity 0.25s;
   opacity: 1;
 }
 .el__index-overlay {
