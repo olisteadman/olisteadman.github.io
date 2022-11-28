@@ -285,7 +285,7 @@ body {
 }
 .el:nth-child(2) .el__bg:before {
   transition-delay: 0.1s;
-  background-image: url("assets/images/digthemountain3.jpg");
+  background-image: url("assets/images/BIGTOPSMALLBOTTOM.jpg");
 }
 .el:nth-child(3) {
   transform: translate3d(210.4166666667%, 0, 0);
