@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Stornoway - Dig The Mountain!</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//widget.songkick.com/332683/widget.js"></script>
 </head>
 
 <body>
@@ -18,6 +19,7 @@
     position: absolute;
     top: 10%;
     left: 0%;
+    text-align: center;
   }
   
   .icon-link {
@@ -32,7 +34,7 @@
     width: 200%;
     vertical-align: top;
   }</Style>
-            <div class="square">
+            <div id=maindiv class="square">
               <a href='#' onClick="inc()"><img id="my_image" style="width:100%" src="assets/images/leterrip/0.jpg"></a>
 
               <script>
@@ -40,7 +42,27 @@
               function inc() {if(cnt<33){
                 cnt=cnt+1
                       $("#my_image").attr("src","assets/images/leterrip/"+cnt+".jpg");
-              }}
+              }else if(cnt==33){
+                cnt=cnt+1
+                let text1='<a href="https://www.songkick.com/artists/332683">TOUR</a>'
+              let text1div=document.createElement('div');
+              text1div.id='text1';
+              text1div.innerHTML=text1;
+              document.getElementById('maindiv').appendChild(text1div);
+
+              let text2='<a href="https://www.youtube.com/channel/UCqSe-Hie9zMxMmtZ9MHOxqg">VIDEOS</a>'
+              let text2div=document.createElement('div');
+              text2div.id='text2';
+              text2div.innerHTML=text2;
+              document.getElementById('maindiv').appendChild(text2div);
+
+              let text3='<a href="https://stornoway.tmstor.es/">STORE</a>'
+              let text3div=document.createElement('div');
+              text3div.id='text3';
+              text3div.innerHTML=text3;
+              document.getElementById('maindiv').appendChild(text3div);
+            }
+          }
               
               </script>
             </div>
