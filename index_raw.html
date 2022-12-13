@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stornoway - Dig The Mountain!</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <Style>
+    body {
+    background: #dfdfdf;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  }
+  
+  .square {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+  }
+  
+  .icon-link {
+    position: absolute;
+    right: 9%;
+    top: 12%;
+    width: 5%;
+    filter: drop-shadow(12px 12px 7px rgba(234, 192, 96, 0.5));
+  }
+  
+  .icon-link img {
+    width: 200%;
+    vertical-align: top;
+  }</Style>
+            <div class="square">
+              <a href='#' onClick="inc()"><img id="my_image" style="width:100%" src="assets/images/leterrip/0.jpg"></a>
+
+              <script>
+              var cnt = 0
+              function inc() {if(cnt<33){
+                cnt=cnt+1
+                      $("#my_image").attr("src","assets/images/leterrip/"+cnt+".jpg");
+              }}
+              
+              </script>
+            </div>
+
+  <a href="https://linktr.ee/Stornoway" target="_blank" class="icon-link">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Mountain_Icon.svg">
+  </a>
+
+</body>
+
+</html>
