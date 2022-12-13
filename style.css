@@ -5,10 +5,8 @@ body {
 
 .square {
   position: absolute;
-  /* margin: -25% 0 0 -25%; */
   top: 10%;
-  /* left: 10%; */
-  /* width: 50vw; */
+  left: 0%;
 }
 
 .icon-link {
