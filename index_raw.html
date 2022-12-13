@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Stornoway - Dig The Mountain!</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -32,7 +33,16 @@
     vertical-align: top;
   }</Style>
             <div class="square">
-                <img style="width:100%" src="assets/images/leterrip/0.jpg">
+              <a href='#' onClick="inc()"><img id="my_image" style="width:100%" src="assets/images/leterrip/0.jpg"></a>
+
+              <script>
+              var cnt = 0
+              function inc() {if(cnt<33){
+                cnt=cnt+1
+                      $("#my_image").attr("src","assets/images/leterrip/"+cnt+".jpg");
+              }}
+              
+              </script>
             </div>
 
   <a href="https://linktr.ee/Stornoway" target="_blank" class="icon-link">
