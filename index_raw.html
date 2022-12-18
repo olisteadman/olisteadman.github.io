@@ -10,66 +10,95 @@
 
 <body>
   <Style>
+    @font-face {
+      font-family: Domino;
+      src: url('assets/domino/Domino-Regular.ttf');
+    }
+
+    h2 {
+      font-family: Domino;
+      margin: 0;
+    }
+
     body {
-    background: #dfdfdf;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  }
-  
-  .square {
-    position: absolute;
-    top: 10%;
-    left: 0%;
-    text-align: center;
-  }
-  
-  .icon-link {
-    position: absolute;
-    right: 9%;
-    top: 12%;
-    width: 5%;
-    filter: drop-shadow(12px 12px 7px rgba(234, 192, 96, 0.5));
-  }
-  
-  .icon-link img {
-    width: 200%;
-    vertical-align: top;
-  }</Style>
-            <div id=maindiv class="square">
-              <a href='#' onClick="inc()"><img id="my_image" style="width:100%" src="assets/images/leterrip/0.jpg"></a>
+      /* background: #AAAAAA; */
+      padding-right: 10%;
+      /* background-image: url(https://img.freepik.com/free-photo/crumpled-white-paper_1194-7543.jpg); */
+    }
 
-              <script>
-              var cnt = 0
-              function inc() {if(cnt<33){
-                cnt=cnt+1
-                      $("#my_image").attr("src","assets/images/leterrip/"+cnt+".jpg");
-              }else if(cnt==33){
-                cnt=cnt+1
-                let text1='<a href="https://www.songkick.com/artists/332683">TOUR</a>'
-              let text1div=document.createElement('div');
-              text1div.id='text1';
-              text1div.innerHTML=text1;
-              document.getElementById('maindiv').appendChild(text1div);
+    .noDecoration,
+    a:link {
+      text-decoration: none;
+    }
 
-              let text2='<a href="https://www.youtube.com/channel/UCqSe-Hie9zMxMmtZ9MHOxqg">VIDEOS</a>'
-              let text2div=document.createElement('div');
-              text2div.id='text2';
-              text2div.innerHTML=text2;
-              document.getElementById('maindiv').appendChild(text2div);
+    .postersquare {
+      position: relative;
+      /* text-align: center; */
+      /* background: #CCCCCC; */
+      width: 98vmin;
+      display: inline-block;
+    }
 
-              let text3='<a href="https://stornoway.tmstor.es/">STORE</a>'
-              let text3div=document.createElement('div');
-              text3div.id='text3';
-              text3div.innerHTML=text3;
-              document.getElementById('maindiv').appendChild(text3div);
-            }
-          }
-              
-              </script>
-            </div>
+    .iconsquare {
+      position: absolute;
+      text-align: right;
+      /* background: #CCCCCC; */
+      width: 98vmin;
+      display: inline-block;
+      padding-right: 5px;
+    }
 
-  <a href="https://linktr.ee/Stornoway" target="_blank" class="icon-link">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Mountain_Icon.svg">
-  </a>
+    .icon-link {
+      position: relative;
+      width: 100%;
+      /* filter: drop-shadow(12px 12px 7px rgba(234, 192, 96, 0.5)); */
+    }
+
+    .icon-link img {
+      width: 10vmin;
+      vertical-align: top;
+    }
+  </Style>
+  <div id=maindiv class="postersquare">
+    <a href='#' onClick="inc()"><img id="my_image" style="width:100%" src="assets/images/leterrip/0.jpg">
+    </a>
+    <script>
+      var cnt = 0
+      function inc() {
+        if (cnt < 24) {
+          cnt = cnt + 1
+          $("#my_image").attr("src", "assets/images/leterrip/" + cnt + ".jpg");
+        } else if (cnt == 24) {
+          cnt = cnt + 1
+          let text1 = '<h2 href="https://www.songkick.com/artists/332683">TOUR</h2>'
+          let text1div = document.createElement('div');
+          text1div.id = 'text1';
+          text1div.innerHTML = text1;
+          document.getElementById('maindiv').appendChild(text1div);
+
+          let text2 = '<h2 href="https://www.youtube.com/channel/UCqSe-Hie9zMxMmtZ9MHOxqg">VIDEOS</h2>'
+          let text2div = document.createElement('div');
+          text2div.id = 'text2';
+          text2div.innerHTML = text2;
+          document.getElementById('maindiv').appendChild(text2div);
+
+          let text3 = '<h2 href="https://stornoway.tmstor.es/">STORE</h2>'
+          let text3div = document.createElement('div');
+          text3div.id = 'text3';
+          text3div.innerHTML = text3;
+          document.getElementById('maindiv').appendChild(text3div);
+        }
+      }
+
+    </script>
+  </div>
+  <div class="iconsquare">
+      <h2 class="noDecoration">click me...</h2>
+
+    <!-- <a href="https://linktr.ee/Stornoway" target="_blank" class="icon-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Mountain_Icon.svg">
+    </a> -->
+  </div>
 
 </body>
 
