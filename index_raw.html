@@ -18,21 +18,21 @@
       margin: 0;
     }
 
-    img {
-      object-fit: cover;
-      object-position: 50% 50%;
-      max-height: 95vh;
-      max-width: 95vw;
+    .imgdiv {
+      background-image: url(assets/images/ezgif.com-gif-maker.gif);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      max-height: 98vh;
+      height: 98vh;
     }
 
     body {
-      /* background-image: url(assets/images/ezgif.com-gif-maker.gif); */
       background-position: center;
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('assets/images/frame1.png');
       background-repeat: repeat;
-      background-size: 100vw;
-      /* background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),  url('assets/images/Base for text.jpg');background-repeat:repeat;background-size:100vw; */
-      height: 100vh;
+      background-size: cover;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('assets/images/frame1.png');
+      /* background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),  url('assets/images/Base for text.jpg');background-repeat:repeat;background-size:100vw; */
     }
 
     .postersquare {
@@ -43,7 +43,7 @@
   </Style>
   <div id=postersquare class="postersquare">
     <a href='https://musicglue.com/stornoway-test/beachcombers-club'>
-      <img id="my_image" src="assets/images/ezgif.com-gif-maker.gif">
+      <div class="imgdiv"></div>
     </a>
   </div>
 
